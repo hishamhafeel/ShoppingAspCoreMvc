@@ -1,0 +1,53 @@
+﻿@model PlaceOrderViewModel
+@{
+    ViewData["Title"] = "Order Products";
+
+}
+
+
+<div>
+    <h4>Place Order</h4>
+    <form method="get">
+        <div class="form-group row">
+            <label asp-for="CustomerNameList" class="col-md-3 col-form-label"></label>
+            <div>
+                @Html.DropDownListFor(m => m.SelectedCustomerId, Model.CustomerNameList, "Select name", 
+                                            new { @class = "form-control" })
+                <span asp-validation-for="SelectedCustomerId" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="OrderDate" class="col-md-3 col-form-label"></label>
+            <input readonly asp-for="OrderDate" class="form-control col-md-4" />
+        </div>
+        <div>
+            <input asp-controller="Order" asp-action="PlaceOrder" type="submit" value="Add Order" class="btn btn-outline-info" />
+        </div>
+    </form>
+</div>
+<br />
+
+<table id="ordersTable" class="table">
+
+    <thead>
+        <tr>
+            <th style="width:auto">Customer ID</th>
+            <th style="width:auto">Order ID</th>
+            <th style="width:auto">Order Date</th>
+            <th style="width:auto" class="text-center">Order Total</th>
+            <th style="width:auto"></th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+
+    </tfoot>
+</table>
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/getOrders.js"></script>
+}

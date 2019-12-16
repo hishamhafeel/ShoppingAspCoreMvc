@@ -1,0 +1,97 @@
+﻿@model OrderViewModel
+@{
+    ViewData["Title"] = "Place Your Order";
+}
+
+
+<form method="Post">
+    <div class="form-row col-md-6">
+        <input asp-for="@Model.OrderId" hidden />
+        <input asp-for="@Model.CustomerId" hidden />
+        <input asp-for="@Model.Customer.Email" hidden />
+
+        @if (Model.OrderItems != null)
+        {
+            @for (int i = 0; i < Model.OrderItems.Count; i++)
+            {
+                @Html.HiddenFor(m => Model.OrderItems[i].Id);
+                @Html.HiddenFor(m => Model.OrderItems[i].Product);
+                @Html.HiddenFor(m => Model.OrderItems[i].Quantity);
+                @Html.HiddenFor(m => Model.OrderItems[i].UnitPrice);
+
+            }
+
+        }
+
+        <div class="form-group">
+            <label asp-for="@Model.Customer.CustomerName"></label>
+            <input readonly class="form-control" id="CustomerId" asp-for="@Model.Customer.CustomerName">
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="@Model.OrderDate"></label>
+            <input readonly class="form-control" id="OrderDate" asp-for="@Model.OrderDate.Date">
+        </div>
+    </div>
+
+
+    <br />
+
+    <table id="orderItemsTable" class="table orderLine1 ">
+        <span id="errorMessageTotal" class="text-danger h4 font-weight-bold"></span>
+        <thead>
+            <tr>
+                <th style="width:11%">Product</th>
+                <th style="width:20%">Product Description</th>
+                <th style="width:19%">Price</th>
+                <th style="width:8%">Quantity</th>
+                <th style="width:22%" class="text-center">Subtotal</th>
+                <th style="width:10%"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <select id="ProductId" class="form-control w-auto">
+                    </select>
+                    <span id="errorMessageProduct" class="text-danger text-left"></span>
+
+
+                </td>
+                <td><input type="text" id="ProductDescription" class="form-control text-center w-auto" value="" readonly /></td>
+                <td><input type="number" id="ProductPrice" class="form-control text-center w-auto" value="" readonly /></td>
+                <td>
+                    <input type="number" id="ProductQuantity" max="10" min="1" class="form-control text-center w-auto">
+                    <span id="errorMessageQty" class="text-danger text-left"></span>
+
+                </td>
+                <td data-table-head="Subtotal" class="text-center ">
+                    <input type="text" id="ProductSubTotal" class="form-control text-center w-auto" value="" readonly>
+                </td>
+                <td class="actions" data-table-head="">
+                    <input type="button" id="AddOrderItem" value="Add Item" class="btn btn-outline-primary" />
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    <label class="h4 font-weight-bold">Grand Total</label>
+                </td>
+                <td>
+                    <input class="form-control text-center h4 font-weight-bold" id="GrandTotal" readonly />
+                </td>
+                <td>
+                    <input type="button" id="SaveOrders" value="Save Order" class="btn btn-primary" />
+
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</form>
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/addOrderItem.js"></script>
+}
+

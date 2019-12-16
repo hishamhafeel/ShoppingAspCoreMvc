@@ -1,0 +1,12 @@
+E:\Training\Programs\Shopping\Shopping.Core\bin\Debug\netcoreapp2.2\Shopping.Core.deps.json
+E:\Training\Programs\Shopping\Shopping.Core\bin\Debug\netcoreapp2.2\Shopping.Core.dll
+E:\Training\Programs\Shopping\Shopping.Core\bin\Debug\netcoreapp2.2\Shopping.Core.pdb
+E:\Training\Programs\Shopping\Shopping.Core\bin\Debug\netcoreapp2.2\Shopping.Data.dll
+E:\Training\Programs\Shopping\Shopping.Core\bin\Debug\netcoreapp2.2\Shopping.Data.pdb
+E:\Training\Programs\Shopping\Shopping.Core\obj\Debug\netcoreapp2.2\Shopping.Core.csprojAssemblyReference.cache
+E:\Training\Programs\Shopping\Shopping.Core\obj\Debug\netcoreapp2.2\Shopping.Core.csproj.CoreCompileInputs.cache
+E:\Training\Programs\Shopping\Shopping.Core\obj\Debug\netcoreapp2.2\Shopping.Core.AssemblyInfoInputs.cache
+E:\Training\Programs\Shopping\Shopping.Core\obj\Debug\netcoreapp2.2\Shopping.Core.AssemblyInfo.cs
+E:\Training\Programs\Shopping\Shopping.Core\obj\Debug\netcoreapp2.2\Shopping.Core.csproj.CopyComplete
+E:\Training\Programs\Shopping\Shopping.Core\obj\Debug\netcoreapp2.2\Shopping.Core.dll
+E:\Training\Programs\Shopping\Shopping.Core\obj\Debug\netcoreapp2.2\Shopping.Core.pdb

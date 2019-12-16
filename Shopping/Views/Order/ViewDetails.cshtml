@@ -1,0 +1,121 @@
+﻿@model OrderDetailsViewModel
+@{
+    ViewData["Title"] = "View Order Details";
+}
+
+<h1>Order Details</h1>
+<hr />
+
+<form>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="OrderId"></label>
+            <input class="form-control" asp-for="OrderId" readonly>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="OrderDate"></label>
+            <input class="form-control" asp-for="OrderDate" readonly>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="CustomerId"></label>
+            <input class="form-control" asp-for="CustomerId" readonly>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="CustomerName"></label>
+            <input class="form-control" asp-for="CustomerName" readonly>
+        </div>
+    </div>
+    <table id="tblOr" class="table">
+        <span id="errorMessage" class="text-danger font-weight-bold"></span>
+        <thead>
+            <tr>
+                <th>Line Item ID</th>
+                <th>Product</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>SubTotal</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.OrderItems)
+            {
+                <tr>
+                    <td><input id="OrderItemId" asp-for="@item.Id" class="form-control" readonly /></td>
+                    <td><input id="ProductName" asp-for="@item.Product.ProductName" class="form-control" readonly /></td>
+                    <td><input id="ProductUnitPrice" asp-for="@item.Product.ProductUnitPrice" class="form-control" readonly /></td>
+                    <td><input id="BuyQuantity" asp-for="@item.Quantity" class="form-control" readonly /></td>
+                    <td><input id="SubTotal" type="number" name="SubTotal" asp-for="@item.SubTotal" class="form-control" readonly /></td>
+                    <td><input type="button" id="btnEditOrderItem" class="btn btn-info" value="Edit" /></td>
+                    <td><input type="button" id="btnDeleteOrderItem" class="btn btn-danger" value="Delete" /></td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    <br />
+    <div class="form-group row">
+        <label asp-for="OrderTotal" class="col-sm-2 col-form-label font-weight-bold"></label>
+        <div class="col-sm-10">
+            <input class="form-control font-weight-bold" asp-for="OrderTotal">
+
+        </div>
+    </div>
+    <br />
+    <div class="form-group row">
+        <input type="submit" value="Go back" class="btn btn-outline-primary" asp-controller="Order" asp-action="Index" />
+    </div>
+
+</form>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-danger font-weight-bold">Confirm Delete</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>I confirm to delete this order item <span id="orderIdOnDelete"></span>.</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnDeleteConfirmed" class="btn btn-danger">Confirm</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="getCodeModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-success font-weight-bold">Delete Successfull</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body"  id="getCode">
+                <p> Successfully Order Item Deleted! </p>
+
+            </div>
+            <div class="modal-footer">
+                <button id="btnCloseModal" type="button" class="btn btn-success">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/js/updateOrderItem.js"></script>
+
+}
