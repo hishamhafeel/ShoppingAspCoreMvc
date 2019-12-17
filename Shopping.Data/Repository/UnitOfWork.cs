@@ -1,10 +1,8 @@
-﻿using Shopping.Data.Interfaces;
-using Shopping.Data.Models;
+﻿using Shopping.Core.Domain.Customer;
+using Shopping.Core.Domain.Order;
+using Shopping.Core.Domain.Product;
+using Shopping.Data.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Shopping.Data.Repository
 {

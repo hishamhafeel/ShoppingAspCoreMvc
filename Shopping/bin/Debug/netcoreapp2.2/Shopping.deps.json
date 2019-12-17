@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "9a23363650f12647d0652353b0dfdda904a6c723"
+    "signature": ""
   },
   "compilationOptions": {
     "defines": [
@@ -10,7 +10,7 @@
       "NETCOREAPP",
       "NETCOREAPP2_2"
     ],
-    "languageVersion": "",
+    "languageVersion": "7.3",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
@@ -30,7 +30,8 @@
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.4",
           "Shopping.Core": "1.0.0",
-          "Shopping.Data": "1.0.0"
+          "Shopping.Data": "1.0.0",
+          "Shopping.Service": "1.0.0"
         },
         "runtime": {
           "Shopping.dll": {}
@@ -364,8 +365,7 @@
         "dependencies": {
           "AutoMapper": "9.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
-          "Microsoft.EntityFrameworkCore": "2.2.0",
-          "Shopping.Data": "1.0.0"
+          "Microsoft.EntityFrameworkCore": "2.2.0"
         },
         "runtime": {
           "Shopping.Core.dll": {}
@@ -378,13 +378,26 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.2.0",
           "Microsoft.EntityFrameworkCore.Design": "2.2.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.0"
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.0",
+          "Shopping.Core": "1.0.0"
         },
         "runtime": {
           "Shopping.Data.dll": {}
         },
         "compile": {
           "Shopping.Data.dll": {}
+        }
+      },
+      "Shopping.Service/1.0.0": {
+        "dependencies": {
+          "Shopping.Core": "1.0.0",
+          "Shopping.Data": "1.0.0"
+        },
+        "runtime": {
+          "Shopping.Service.dll": {}
+        },
+        "compile": {
+          "Shopping.Service.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3728,6 +3741,11 @@
       "sha512": ""
     },
     "Shopping.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shopping.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

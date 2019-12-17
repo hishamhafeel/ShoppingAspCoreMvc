@@ -1,7 +1,5 @@
-﻿using Shopping.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Shopping.Core.Domain.Order;
+using Shopping.Core.Domain.Product;
 
 namespace Shopping.Core.BO
 {

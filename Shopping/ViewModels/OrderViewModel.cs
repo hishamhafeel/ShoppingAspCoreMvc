@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using Shopping.Data.Models;
+using Shopping.Core.Domain.Customer;
+using Shopping.Core.Domain.Order;
+using Shopping.Core.Domain.Product;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Shopping.ViewModels
 {

@@ -1,10 +1,9 @@
-﻿using JetBrains.Annotations;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Shopping.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Shopping.Core.Domain.Customer;
+using Shopping.Core.Domain.Order;
+using Shopping.Core.Domain.Product;
+using Shopping.Core.Domain.User;
 
 namespace Shopping.Data
 {

@@ -1,25 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.Extensions.Logging;
 using Shopping.Core.BO;
-using Shopping.Core.Exceptions;
-using Shopping.Core.ServiceInterfaces;
-using Shopping.Core.Services;
-using Shopping.Data.Interfaces;
-using Shopping.Data.Models;
-using Shopping.Data.Repository;
 using Shopping.ListModels;
+using Shopping.Service.ServiceInterfaces;
 using Shopping.ViewModels;
 
 namespace Shopping.Controllers
 {
-    
+
     public class OrderController : Controller
     {
         private readonly ICustomerService customerService;

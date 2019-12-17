@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Shopping.Core.ServiceInterfaces;
 using Shopping.ListModels;
-using Shopping.Data.Models;
+using Shopping.Service.ServiceInterfaces;
 
 namespace Shopping.Controllers
 {

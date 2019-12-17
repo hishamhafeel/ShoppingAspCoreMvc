@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Shopping.Data.Models;
-using System;
+﻿using Shopping.Core.Domain.Customer;
+using Shopping.Core.Domain.Product;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 
 namespace Shopping.Data

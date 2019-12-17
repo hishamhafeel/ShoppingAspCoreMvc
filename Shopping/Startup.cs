@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Shopping.Core.ServiceInterfaces;
-using Shopping.Core.Services;
+using Shopping.Core.Domain.User;
 using Shopping.Data;
 using Shopping.Data.Interfaces;
-using Shopping.Data.Models;
 using Shopping.Data.Repository;
 using Shopping.MappingConfiguration;
+using Shopping.Service.ServiceInterfaces;
+using Shopping.Service.Services;
 
 namespace Shopping
 {

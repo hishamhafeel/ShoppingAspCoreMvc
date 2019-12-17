@@ -1,11 +1,7 @@
 ﻿using AutoMapper;
 using Shopping.Core.BO;
-using Shopping.Data.Models;
+using Shopping.Core.Domain.Order;
 using Shopping.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Shopping.MappingConfiguration
 {

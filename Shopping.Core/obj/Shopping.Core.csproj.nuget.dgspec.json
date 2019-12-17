@@ -1,91 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Shopping\\ShoppingAspCoreMvc\\Shopping.Core\\Shopping.Core.csproj": {}
+    "D:\\Training\\Programs\\Shopping\\Shopping.Core\\Shopping.Core.csproj": {}
   },
   "projects": {
-    "E:\\Shopping\\ShoppingAspCoreMvc\\Shopping.Core\\Shopping.Core.csproj": {
+    "D:\\Training\\Programs\\Shopping\\Shopping.Core\\Shopping.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Shopping\\ShoppingAspCoreMvc\\Shopping.Core\\Shopping.Core.csproj",
+        "projectUniqueName": "D:\\Training\\Programs\\Shopping\\Shopping.Core\\Shopping.Core.csproj",
         "projectName": "Shopping.Core",
-        "projectPath": "E:\\Shopping\\ShoppingAspCoreMvc\\Shopping.Core\\Shopping.Core.csproj",
+        "projectPath": "D:\\Training\\Programs\\Shopping\\Shopping.Core\\Shopping.Core.csproj",
         "packagesPath": "C:\\Users\\hisha\\.nuget\\packages\\",
-        "outputPath": "E:\\Shopping\\ShoppingAspCoreMvc\\Shopping.Core\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\hisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp2.2"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp2.2": {
-            "projectReferences": {
-              "E:\\Shopping\\ShoppingAspCoreMvc\\Shopping.Data\\Shopping.Data.csproj": {
-                "projectPath": "E:\\Shopping\\ShoppingAspCoreMvc\\Shopping.Data\\Shopping.Data.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp2.2": {
-          "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            },
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "E:\\Shopping\\ShoppingAspCoreMvc\\Shopping.Data\\Shopping.Data.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\Shopping\\ShoppingAspCoreMvc\\Shopping.Data\\Shopping.Data.csproj",
-        "projectName": "Shopping.Data",
-        "projectPath": "E:\\Shopping\\ShoppingAspCoreMvc\\Shopping.Data\\Shopping.Data.csproj",
-        "packagesPath": "C:\\Users\\hisha\\.nuget\\packages\\",
-        "outputPath": "E:\\Shopping\\ShoppingAspCoreMvc\\Shopping.Data\\obj\\",
+        "outputPath": "D:\\Training\\Programs\\Shopping\\Shopping.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -115,15 +41,15 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[2.2.0, )"
             },
